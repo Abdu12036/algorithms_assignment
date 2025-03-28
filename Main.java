@@ -13,8 +13,20 @@ public class Main {
         // returning our minimum number to main
         return min;
     }
+
+    // function to find the average of numbers in array
+    public static double findAverage(int[] arr, int n) {
+        double sum = 0;
+        // summing all the numbers in array
+        for (int i = 0; i < n; i++) {
+            sum += arr[i];
+        }
+        // dividing the sum into n and returning the average
+        return (sum / n);
+    }
+
     public static void main(String[] args) {
-        int[] arr = {1,7,5,-4,4};
-        System.out.println(findMinimum(arr, 5));
+        int[] arr = {2,4,8,-4,4};
+        System.out.println(findAverage(arr, 5));
     }
 }
