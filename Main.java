@@ -1,3 +1,5 @@
+import recursion.Recursion;
+
 public class Main {
     // function to find the minimum number from the array
     public static int findMinimum(int[] arr, int n) {
@@ -26,7 +28,7 @@ public class Main {
     }
 
     // Function for checking whether the number is prime or not
-    public static String isPrime(int n) {
+    public static String checkPrime(int n) {
         // If number is less than 2 then it is not prime
         if(n<2)return "Composite";
         // if there is any divisor between two and number itself, then it is not prime
@@ -38,6 +40,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        System.out.println(isPrime(13));
+        Recursion recursion = new Recursion();
+        System.out.println(recursion.factorial(5));
     }
 }
