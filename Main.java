@@ -41,6 +41,6 @@ public class Main {
 
     public static void main(String[] args) {
         Recursion recursion = new Recursion();
-        System.out.println(recursion.factorial(5));
+        System.out.println(recursion.fibonacci(8));
     }
 }
