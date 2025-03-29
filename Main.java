@@ -41,6 +41,6 @@ public class Main {
 
     public static void main(String[] args) {
         Recursion recursion = new Recursion();
-        System.out.println(recursion.calculateBinomial(2,1));;
+        System.out.println(recursion.findGCD(10,7));
     }
 }

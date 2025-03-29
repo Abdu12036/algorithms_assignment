@@ -8,6 +8,7 @@ public class Recursion {
 
     // function for finding the factorial of the number
     // it uses a recursive approach
+    // Time complexity: O(n)
     public int factorial(int n) {
         // if number equals to 0 or 1, then return 1
         if(n==0 || n==1)return 1;
@@ -18,6 +19,7 @@ public class Recursion {
 
     // function for finding the n-th term of fibonacci sequence
     // it uses a recursive approach
+    // Time complexity: O(2^n)
     public int fibonacci(int n) {
         // the zero term is 0 and first term is 1
         if(n==0)return 0;
@@ -28,6 +30,7 @@ public class Recursion {
 
     // function for raising a to the n-th power
     // it uses a recursive approach
+    // Time complexity: O(n)
     public int toPower(int a, int n){
         // if base is 1 or power is 0 then it must return 1
         if(a==1 || n==0)return 1;
@@ -37,6 +40,7 @@ public class Recursion {
 
     // function for printing sequence of numbers in reverse order
     // it uses recursive approach
+    // Time complexity: O(n)
     public void printNumbers(int n) {
         // base case
         if (n == 0) return;
@@ -50,6 +54,7 @@ public class Recursion {
 
     // function for checking whether s is all consists of numbers
     // it uses recursive approach
+    // Time complexity: O(n)
     public boolean isAllDigits(String s) {
         // base case
         // if string becomes empty then return true
@@ -67,6 +72,8 @@ public class Recursion {
     }
 
     // function for finding binomial coefficient
+    // it uses recursive approach
+    // Time complexity: O(2^n)
     public int calculateBinomial(int n, int k) {
         // Base cases
         if (k == 0 || k == n) {
@@ -79,4 +86,18 @@ public class Recursion {
         // Recursive call using formula: C(n, k) = C(n-1, k) + C(n-1, k-1)
         return calculateBinomial(n - 1, k) + calculateBinomial(n - 1, k - 1);
     }
+
+    // function for finding GCD of 2 numbers
+    // it uses recursive approach
+    // Time complexity: O(log(min(a,b)))
+    public int findGCD(int a, int b) {
+        // Base case
+        // if b is 0, return a
+        if (b == 0) {
+            return a;
+        }
+        // Recursive case: GCD(a, b) = GCD(b, a % b)
+        return findGCD(b, a % b);
+    }
 }
+
