@@ -41,6 +41,6 @@ public class Main {
 
     public static void main(String[] args) {
         Recursion recursion = new Recursion();
-        System.out.println(recursion.isAllDigits("1574a65"));
+        System.out.println(recursion.calculateBinomial(2,1));;
     }
 }

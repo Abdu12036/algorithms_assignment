@@ -65,4 +65,18 @@ public class Recursion {
         // Recursive call excluding the first character of string
         return isAllDigits(s.substring(1));
     }
+
+    // function for finding binomial coefficient
+    public int calculateBinomial(int n, int k) {
+        // Base cases
+        if (k == 0 || k == n) {
+            return 1;
+        }
+        // invalid cases
+        if (k < 0 || k > n) {
+            return 0;
+        }
+        // Recursive call using formula: C(n, k) = C(n-1, k) + C(n-1, k-1)
+        return calculateBinomial(n - 1, k) + calculateBinomial(n - 1, k - 1);
+    }
 }
