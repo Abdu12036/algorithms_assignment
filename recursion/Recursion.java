@@ -1,6 +1,11 @@
 package recursion;
 
+import java.util.Scanner;
+
 public class Recursion {
+
+    Scanner sc = new Scanner(System.in);
+
     // function for finding the factorial of the number
     // it uses a recursive approach
     public int factorial(int n) {
@@ -29,5 +34,20 @@ public class Recursion {
         // using recursion to call function n times
         else return a*toPower(a,n-1);
     }
+
+    // function for printing sequence of numbers in reverse order
+    // it uses recursive approach
+    public void printNumbers(int n) {
+        // base case
+        if (n == 0) return;
+        // input values
+        int a = sc.nextInt();
+        // calling the function itself until n is 0
+        printNumbers(n - 1);
+        // the printing will be executed only after function call is finished
+        System.out.print(a + " ");
+    }
+
+
 
 }

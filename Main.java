@@ -35,12 +35,12 @@ public class Main {
         for(int i = 2;i<n;i++){
             if(n%i==0)return "Composite";
         }
-        // return true if none of the conditions above were true
+        // return "prime" if none of the conditions above were true
         return "Prime";
     }
 
     public static void main(String[] args) {
         Recursion recursion = new Recursion();
-        System.out.println(recursion.toPower(5,3));
+        recursion.printNumbers(5);
     }
 }
