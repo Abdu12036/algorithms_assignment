@@ -25,8 +25,19 @@ public class Main {
         return (sum / n);
     }
 
+    // Function for checking whether the number is prime or not
+    public static String isPrime(int n) {
+        // If number is less than 2 then it is not prime
+        if(n<2)return "Composite";
+        // if there is any divisor between two and number itself, then it is not prime
+        for(int i = 2;i<n;i++){
+            if(n%i==0)return "Composite";
+        }
+        // return true if none of the conditions above were true
+        return "Prime";
+    }
+
     public static void main(String[] args) {
-        int[] arr = {2,4,8,-4,4};
-        System.out.println(findAverage(arr, 5));
+        System.out.println(isPrime(13));
     }
 }
