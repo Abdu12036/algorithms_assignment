@@ -14,11 +14,20 @@ public class Recursion {
     // function for finding the n-th term of fibonacci sequence
     // it uses a recursive approach
     public int fibonacci(int n) {
-        // the first term is 0 and second term is 1
-        if(n==1)return 0;
-        else if(n==2)return 1;
+        // the zero term is 0 and first term is 1
+        if(n==0)return 0;
+        else if(n==1)return 1;
         // sums up the previous two terms of the sequence
         else return fibonacci(n-1) + fibonacci(n-2);
+    }
+
+    // function for raising a to the n-th power
+    // it uses a recursive approach
+    public int toPower(int a, int n){
+        // if base is 1 or power is 0 then it must return 1
+        if(a==1 || n==0)return 1;
+        // using recursion to call function n times
+        else return a*toPower(a,n-1);
     }
 
 }
