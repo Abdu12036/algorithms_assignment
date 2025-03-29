@@ -48,6 +48,21 @@ public class Recursion {
         System.out.print(a + " ");
     }
 
-
-
+    // function for checking whether s is all consists of numbers
+    // it uses recursive approach
+    public boolean isAllDigits(String s) {
+        // base case
+        // if string becomes empty then return true
+        if (s.length() == 0) {
+            return true;
+        }
+        // Check first character
+        char firstChar = s.charAt(0);
+        if (!Character.isDigit(firstChar)) {
+            // If first character isn't a digit, return false
+            return false;
+        }
+        // Recursive call excluding the first character of string
+        return isAllDigits(s.substring(1));
+    }
 }
