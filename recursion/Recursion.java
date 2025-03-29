@@ -13,7 +13,7 @@ public class Recursion {
         // if number equals to 0 or 1, then return 1
         if(n==0 || n==1)return 1;
         // calling function itself with parameter n-1
-        // untill n becomes 1
+        // until n becomes 1
         else return n*factorial(n-1);
     }
 
@@ -58,7 +58,7 @@ public class Recursion {
     public boolean isAllDigits(String s) {
         // base case
         // if string becomes empty then return true
-        if (s.length() == 0) {
+        if (s.isEmpty()) {
             return true;
         }
         // Check first character
